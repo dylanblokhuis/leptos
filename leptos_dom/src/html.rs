@@ -310,7 +310,7 @@ cfg_if! {
 
     #[derive(Clone, educe::Educe, PartialEq, Eq)]
     #[educe(Default)]
-    pub(crate) enum ElementChildren {
+    pub enum ElementChildren {
         #[educe(Default)]
         Empty,
         Children(Vec<View>),
