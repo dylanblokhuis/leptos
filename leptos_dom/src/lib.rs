@@ -258,11 +258,11 @@ cfg_if! {
     /// HTML element.
     #[derive(Clone, PartialEq, Eq)]
     pub struct Element {
-      name: Cow<'static, str>,
-      is_void: bool,
-      attrs: SmallVec<[(Cow<'static, str>, Cow<'static, str>); 4]>,
-      children: ElementChildren,
-      id: HydrationKey,
+      pub name: Cow<'static, str>,
+      pub is_void: bool,
+      pub attrs: SmallVec<[(Cow<'static, str>, Cow<'static, str>); 4]>,
+      pub children: ElementChildren,
+      pub id: HydrationKey,
       #[cfg(debug_assertions)]
       /// Optional marker for the view macro source, in debug mode.
       pub view_marker: Option<String>
